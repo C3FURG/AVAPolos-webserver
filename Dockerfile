@@ -75,7 +75,5 @@ RUN mkdir -p /run/apache2 \
 COPY root /
 RUN chmod +x /start.sh
 
-HEALTHCHECK CMD curl --fail http://localhost/ || exit 1
-
 EXPOSE 80
 ENTRYPOINT ["/start.sh"]
